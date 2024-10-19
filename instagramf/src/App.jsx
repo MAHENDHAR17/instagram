@@ -17,6 +17,7 @@ const App = () => {
       <Route path='/profile'element={<Profile/>}/>
      </Routes>
      </BrowserRouter>
+     
 
     </div>
   )
