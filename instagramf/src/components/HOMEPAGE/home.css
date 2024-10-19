@@ -1,0 +1,9 @@
+.homecontant{
+    width: 80vw;
+    height: 100vh;
+    background-color: black;
+    position: absolute;
+    top: 0%;
+    left:20%;
+    overflow: auto;
+}

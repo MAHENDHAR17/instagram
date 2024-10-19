@@ -1,0 +1,118 @@
+/* full screen box */
+
+.log-box{
+    height: 98vh;
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* gap: 20px; */
+    margin: auto;
+  }
+  /* add img box  */
+  .log-img{
+    height: 90vh;
+    width: 25vw;
+    background-image:url(https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWtnOXNkdzVnZXVwaGxoMHh2cmRrem82N3loeWI5ZmdneXNna29udyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/iIdHTigUWckv6ilArc/giphy.webp);
+    background-size:cover;
+    
+  }  
+  /* add img completed*/
+  
+  /* main second boxstart */
+  /* child-1 start */
+  .log-chil{
+    height: 90vh;
+    width: 25vw;
+  
+  }
+  /*  */
+  .log-chil .chil-1{
+    height: 70%;
+    width: auto;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  }
+  .log-chil .chil-1 h1{
+    font-style: italic;
+    font-family: cursive;
+    margin-top: 5px;
+  }
+  .log-chil .chil-1 input{
+    height: 10%;
+    width: 80%;
+    margin-top: 5px;
+    border-radius: 7px;
+    border: 0px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    text-align: center;
+  }
+  .log-chil .chil-1 button{
+    height: 10%;
+    width: 80%;
+    margin-top: 15px;
+    border-radius: 10px;
+    border: 0px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    cursor: pointer;
+  }
+  .log-chil .chil-1 .or{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+  }
+  
+  .log-chil .chil-1 .or::before,.log-chil .chil-1 .or::after{
+  content: "";
+  height: 1px;
+  background-color: black;
+  display: block;
+  }
+  .log-chil .chil-1 img{
+    height: 30px;
+    width: 40px;
+    border-radius: 50px;
+    
+  }
+  .log-chil .chil-1 h2{
+    cursor: pointer;
+  }
+  /* chil-1 complet */
+  /* chil-2 start */
+  .log-chil .chil-2{
+    height: 10%;
+    width: auto;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    margin-top: 8px;
+  }
+  .log-chil .chil-2>h2{
+    font-size: small;
+    padding: 10px;
+  }
+  
+  /* chil-3start */
+  
+  .log-chil .chil-3{
+    height: 18%;
+    width: auto;
+  
+  }
+  
+  .chil-3-img{
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    
+  }
+  .log-chil .chil-3 img{
+    height: 35px;
+    width: 60px;
+  }
+  /* chl-3 close */
+
+
+  
