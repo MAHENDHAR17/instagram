@@ -1,26 +1,28 @@
 import React, { useRef } from 'react'
 import './Sinup.css'
 import { useNavigate } from 'react-router-dom'
-import Login from '../LOGIN/Login'
+import axios from 'axios'
+
 
 const Sin = () => {
-  let mail=useRef()
+  let email=useRef()
   let fname=useRef()
   let uname=useRef()
   let password=useRef()
   let navigate=useNavigate()
   
-  const sinup = ()=>{
-   if(mail.current.value ==0||fname.current.value ==0||uname.current.value==0||password.current.value==0){
+  const sinup = async()=>{
+   if(email.current.value == 0||fname.current.value == 0||uname.current.value == 0||password.current.value == 0){
     console.log("fill all the boxes")
    }else{
-    const userid={
-      'mail':mail.current.value,
-      'fullname':fname.current.value,
-      'username':uname.current.value,
-      'password':password.current.value,
-    }
-    console.log(userid)
+    await axios.post("http:localhost:8888/ig/auth/sinup",{
+      
+      "username":uname.current.value,
+      "email":email.current.value,
+      "password":password.current.value,
+    
+    })
+    console.log(user) 
     navigate('/Login')
    }
     
@@ -36,7 +38,7 @@ const Sin = () => {
              <button> <a href='/Login'>log-in</a></button>
 
              <h2 className="or">or</h2>
-             <input type="Mail" placeholder="Mail or Nume" ref={mail} />
+             <input type="Mail" placeholder="Mail or Nume" ref={email} />
              <input type="text" placeholder=" full name" ref={fname} />
              <input type="text" placeholder="username" ref={uname}/>
              <input type="password" placeholder="Passwod" ref={password} />
