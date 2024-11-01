@@ -1,9 +1,9 @@
-const router=require('express').Router()
-const User=require("../models/userscol")
+const router = require('express').Router()
+const User = require("../models/userscol")
 
-router.get("/sinup",async(req,res)=>{   //localhost:8888/ig/auth/sinup
+router.post("/sinup",async(req,res)=>{   //localhost:8888/ig/auth/sinup
 await new User({
-        usename:req.body.usename,
+        username:req.body.username,
         email:req.body.email,
         password:req.body.password
     }).save()

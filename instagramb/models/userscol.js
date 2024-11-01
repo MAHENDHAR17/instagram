@@ -1,7 +1,7 @@
 const mongoose=require("mongoose")
 
 
-const userSchema=new mongoose.Schema({
+const userSchema = new mongoose.Schema({
     username:{
         type:String,
         required:true,
@@ -19,13 +19,13 @@ const userSchema=new mongoose.Schema({
     fullname:{
         type:String,
     },
-    profilpick:{
+    profilepic:{
         type:String,
     },
-    follower:{
+    followers:{
         type:Array,
     },
-    following:{
+    followings:{
         type:Array,
     },
     bio:{

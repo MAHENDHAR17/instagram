@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
 
-const Sin = () => {
+const Sinup = () => {
   let email=useRef()
   let fname=useRef()
   let uname=useRef()
@@ -15,7 +15,7 @@ const Sin = () => {
    if(email.current.value == 0||fname.current.value == 0||uname.current.value == 0||password.current.value == 0){
     console.log("fill all the boxes")
    }else{
-    await axios.post("http:localhost:8888/ig/auth/sinup",{
+    await axios.post("http://localhost:8888/ig/auth/sinup",{
       
       "username":uname.current.value,
       "email":email.current.value,
@@ -60,4 +60,4 @@ const Sin = () => {
   )
 }
 
-export default Sin
+export default Sinup

@@ -1,5 +1,5 @@
-const express=require("express")
-const app=express()
+const express = require("express")
+const app = express()
 //mongodb+srv://ig:ig@cluster0.6na27.mongodb.net/
 const mongoose = require('mongoose');
 const authRoute=require('./routes/Auth')
