@@ -9,7 +9,7 @@ const Sinup = () => {
   let fname=useRef()
   let uname=useRef()
   let password=useRef()
-  let navigate=useNavigate()
+  let navigate = useNavigate()
   
   const sinup = async()=>{
    if(email.current.value == 0||fname.current.value == 0||uname.current.value == 0||password.current.value == 0){
@@ -23,7 +23,7 @@ const Sinup = () => {
     
     })
     console.log(user) 
-    navigate('/Login')
+     navigate('/login')
    }
     
   }

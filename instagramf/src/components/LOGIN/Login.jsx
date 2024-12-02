@@ -1,25 +1,27 @@
 import React, { useRef } from 'react'
 import './Login.css'
 import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
 
 const Login = () => {
 
-  let mail=useRef()
+  let email=useRef()
   let password=useRef()
   let navigate=useNavigate()
   const loin= ()=>{
-    if(mail.current.value==0||password.current.value==0){
+    if(email.current.value==0||password.current.value==0){
       console.log("error")
     }else{
-      let userd={
-        'mail':mail.current.value,
-        'password':password.current.value,
-      }
-      console.log(userd)
-      navigate('/Home')
-
+      axios.post("http://localhost:8888/ig/auth/login",{
+        'email':email.current.value,
+        'password':password.current.value
+      })
+      
+      console.log(user)
+      navigate('/')
     }
-  }
+    }
+  
   return (
     <div>
       <div className="log-box">
@@ -28,7 +30,7 @@ const Login = () => {
         <div className="log-chil">
             <div className="chil-1">
              <h1>instagram</h1>
-             <input type="Mail" placeholder="Mail or Nume" ref={mail}/>
+             <input type="Mail" placeholder="Mail or Nume" ref={email}/>
              <input type="password" placeholder="Passwod" ref={password}/>
              <button onClick={loin}>log-in</button>
 
